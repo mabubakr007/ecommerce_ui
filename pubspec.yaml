@@ -68,6 +68,7 @@ flutter:
     - images/cats/lighting.png
     - images/cats/kitchen.png
     - images/cats/paint.png
+    - images/login_back.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

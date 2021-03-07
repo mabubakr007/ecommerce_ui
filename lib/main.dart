@@ -7,7 +7,7 @@ import 'package:char_diwari_ecommerce_app/pages/login.dart';
 void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: DynamicHomePage(),
+    home: Login(),
     //DynamicHomePage(),
   ));
 }

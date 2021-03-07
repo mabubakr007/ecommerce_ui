@@ -93,22 +93,11 @@ class _LoginState extends State<Login> {
     }
   }
   
-*/
-class Login extends StatefulWidget {
-  @override
-  _LoginState createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
+*/class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*
       appBar: new AppBar(
           elevation: 0.2,
           backgroundColor: Colors.yellow,
@@ -116,13 +105,34 @@ class _LoginState extends State<Login> {
             "Login",
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           )),
+      */
       body: Stack(
         children: <Widget>[
-          Center(
-            child: new FlatButton(
-              color: Colors.red.shade900,
+          Image.asset(
+            'images/login_back.jpg',
+            fit: BoxFit.cover,
+            width: double.infinity,
+          ),
+          /*
+          Visibility(
+              child: Center(
+                child: Container(
+                  alignment: Alignment.center,
+                  color: Colors.white.withOpacity(0.9),
+                  child: CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation(Colors.red),
+                  ),
+                ),
+              ),
+            )*/
+        ],
+      ),
+      bottomNavigationBar: Container(
+          child: new FlatButton(
+              color: Colors.yellow,
               onPressed: () {
-                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => DynamicHomePage()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => DynamicHomePage()));
               },
               child: Text(
                 "Sign In/ Sign Up with Google",
@@ -132,22 +142,6 @@ class _LoginState extends State<Login> {
               ),
             ),
           ),
-          /*
-          Visibility(
-            visible: loading ?? true,
-            child: Center(
-              child: Container(
-                alignment: Alignment.center,
-                color: Colors.white.withOpacity(0.9),
-                child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation(Colors.red),
-                ),
-              ),
-            ),
-          )
-          */
-        ],
-      ),
     );
   }
-
+}
